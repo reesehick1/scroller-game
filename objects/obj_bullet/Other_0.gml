@@ -1,3 +1,3 @@
 instance_destroy()
 
-score += 20
+score -= 15

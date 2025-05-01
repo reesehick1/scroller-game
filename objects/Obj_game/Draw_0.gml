@@ -1,24 +1,25 @@
 switch(room){
 	case rm_game:
-		draw_text(20,20, "SCORE:"+string(score));
-		draw_text(20,40, "LIVES:"+string(lives));
+		draw_text(20,20, "SCORE: "+string(score));
+		draw_text(20,40, "LIVES: "+string(lives));
 		break;
 		
 	case rm_start:
-	draw_set_halign(fa_center)
+	draw_set_halign(fa_center);
 	var c = c_white;
 		draw_text_transformed_color(
 			room_width/2, 65, "Last Bastion", 
 			3, 3, 2, c,c,c,c, 1
 		);
-		draw_text(
-			room_width/2, 200,
-@"
-LEFT/RIGHT arrows: move
-SPACE: shoot
-
->> PRESS enter to start <<
-"
+	var c = c_white
+		draw_text_transformed_color(
+			room_width/3, 200, @"
+LEFT/RIGHT ARROWS: MOVE
+SPACE: SHOOT
+Dont miss it'll cost ya
+>> PRESS enter to START <<
+", 
+			1, 1, 0, c,c,c,c,1
 		);	
 		draw_set_halign(fa_left);
 		break;

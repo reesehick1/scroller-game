@@ -11,13 +11,14 @@ if(keyboard_check_pressed(vk_enter)){
 	}
 }
 
-if(room == rm_start){
+if(room == rm_game){
 	if(score >= 10000){
 		room_goto(rm_win);
 	}
-
-	if
-	(lives <= 0){
+	if(lives <= 0){
+		room_goto(rm_gameover);
+	}
+	if(score <= -1){
 		room_goto(rm_gameover);
 	}
 }
