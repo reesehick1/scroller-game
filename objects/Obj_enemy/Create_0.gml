@@ -1,1 +1,2 @@
-vspeed = 3;
+hspeed = 2;
+Ehealth = 5;

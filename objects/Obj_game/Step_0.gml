@@ -14,6 +14,7 @@ if(keyboard_check_pressed(vk_enter)){
 if(room == rm_game){
 	if(score >= 10000){
 		room_goto(rm_win);
+		audio_play_sound(powerUp__1_,1,false)
 	}
 	if(lives <= 0){
 		room_goto(rm_gameover);
@@ -22,3 +23,5 @@ if(room == rm_game){
 		room_goto(rm_gameover);
 	}
 }
+
+layer_background_create("background",spr_bg_long)
