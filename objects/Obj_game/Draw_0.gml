@@ -12,14 +12,15 @@ switch(room){
 			3, 3, 2, c,c,c,c, 1
 		);
 	var c = c_white
+	draw_set_halign(fa_center);
 		draw_text_transformed_color(
-			room_width/3, 200, @"
+			room_width/2, 215, @"
 LEFT/RIGHT ARROWS: MOVE
-SPACE: SHOOT
-Dont miss it'll cost ya
+SPACE AND UP: SHOOT
+DONT MISS!
 >> PRESS enter to START <<
 ", 
-			1, 1, 0, c,c,c,c,1
+			.85, .85, 0, c,c,c,c,1
 		);	
 		draw_set_halign(fa_left);
 		break;
@@ -42,7 +43,7 @@ Dont miss it'll cost ya
 	draw_set_halign(fa_center)
 	var c = c_red;
 		draw_text_transformed_color(
-			room_width/2, 150, "GAME OVER", 
+			room_width/2, 150, "YOU FAIL", 
 			3, 3, 0, c,c,c,c, 1
 		);
 		draw_text(
