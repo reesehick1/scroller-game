@@ -7,6 +7,6 @@ if (x < sprite_width / 2) {
 	x = sprite_width / 2; 
 }
 
-
+cooldown -= 1;
 
 

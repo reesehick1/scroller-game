@@ -1,16 +1,15 @@
 if(room != rm_game){
 	exit;
 }
-	repeat(2){
-		if(choose(0,1) == 0){
-			var xx = irandom_range(12 , 286);
-			var yy = -1 * sprite_height;
-		} 
-		else {
-			var xx = irandom_range(sprite_width + 12, room_width - sprite_width * 1.5);
-			var yy = -1 * sprite_height;
-		}
+	repeat(4){
+			var xx = -130;
+			var yy = irandom_range(40, 225);
 }
-instance_create_layer(xx,yy, "instances", Obj_enemy)
-
+var chance = irandom_range(1,100);
+	if(chance <= 90){
+		instance_create_layer(xx,yy, "instances",Obj_enemy )
+}
+	else  {
+		instance_create_layer(xx,yy, "instances", Obj_enemy_2)
+}
 alarm[0] = irandom_range(1,2)*game_get_speed(gamespeed_fps);
